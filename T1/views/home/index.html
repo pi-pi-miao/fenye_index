@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .pager a{
+            display: inline-block;
+            padding: 5px;
+            margin: 3px;
+            background-color: cadetblue;
+        }
+        .pager a.active{
+            background-color:brown ;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>提交数据</h1>
+<form method="post" action="/index/{{current_page}}">
+    <input name="username" type="text"/>
+    <input name="email" type="text"/>
+    <input type="submit" value="提交"/>
+</form>
+<h1>显示数据</h1>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>用户名</th>
+            <th>邮箱</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for line in list_info %}
+            <tr>
+                <!--<td>{{line['username']}}</td>-->
+                <td>{% raw line['username']%}</td>
+                <td>{{line['email']}}</td>
+            </tr>
+        {% end %}
+        </tbody>
+    </table>
+<div class="pager">
+        {% raw str_page %}
+</div>
+</body>
+</html>

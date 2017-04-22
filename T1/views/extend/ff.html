@@ -1,0 +1,18 @@
+{% extends "../master/layout.html "%}
+{% block body %}
+<h1>ff</h1>
+
+<h1>end</h1>
+
+<!--这里是导入include目录中form文件中的插件内容，注意这里百分号和括号之间不能有空格
+如果要用这个插件很多分，那么多导入几次就行了
+-->
+{% include '../include/form.html' %}
+{% include '../include/form.html' %}
+{% include '../include/form.html' %}
+{% end %}
+{ % block js %}
+  <script>
+      console.log("ff")
+  </script>
+{ % end % }

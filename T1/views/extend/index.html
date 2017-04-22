@@ -1,0 +1,22 @@
+<!--表示继承使用哪一个模板-->
+{% extends '../master/layout.html'%}
+
+<!--表示替换掉了layout母版中的css内容-->
+{% block css %}
+<style>
+    div{
+        border: 1px solid red;
+    }
+</style>
+{% end %}
+<!--表示替换了母版中和下面相同的内容-->
+{% block body % }
+    <h1>Index</h1>
+    {% inclue '../include/form.html'%}
+{% end %}
+
+{% block js %}
+<script>
+    console.log("ss")
+</script>
+{% end %}

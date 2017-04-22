@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .pg-header{
+            height: 48px;
+            background-color: papayawhip;
+        }
+        .pg-footer{
+            height: 100px;
+            background-color: cadetblue;
+        }
+    </style>
+    <!--上面是公用样式，下面是自定义样式-->
+    {% block css %}{% end %}
+</head>
+<body>
+<div class="pg-header">
+
+</div>
+<div class="pg-content">
+    {% block body %}{% end %}
+</div>
+<div class="pg-footer">adss</div>
+<script src="xxxj"></script>
+    {% block js %}{% end %}
+</body>
+</html>
